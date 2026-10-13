@@ -1,0 +1,19 @@
+<mat-card role="region" [attr.aria-label]="center().name">
+  <mat-card-header><mat-card-title>{{ center().name }}</mat-card-title></mat-card-header>
+  <mat-card-content>
+    @if (items().length) {
+      <mat-list>
+        @for (reservation of items(); track reservation.id) {
+          <mat-list-item>
+            <span matListItemTitle>{{ reservation.participantName }}</span>
+            <span matListItemLine>{{ 'participants' | translate }}: {{ reservation.participants }}</span>
+          </mat-list-item>
+        }
+      </mat-list>
+    } @else { <p>{{ 'empty' | translate }}</p> }
+  </mat-card-content>
+  <mat-card-footer>
+    <p>{{ 'total-participants' | translate }}: {{ total() }}</p>
+    <p>{{ 'available-capacity' | translate }}: {{ available() }}</p>
+  </mat-card-footer>
+</mat-card>

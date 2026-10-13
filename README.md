@@ -58,12 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
+GITHUB: https://github.com/j4ndrow/ea7747u202421618.
 git push -u origin main
 
-git commit -m "nuevo commit"
-
-git add .
-
-git commit -m "feat: otro commit"
-
-git push

@@ -12,7 +12,7 @@ export class ReservationApi {
   private http = inject(HttpClient);
   private endpoint = new Endpoint(environment.apiUrl, environment.reservationsPath);
   getAll(): Observable<Reservation[]> {
-    return this.http.get<ReservationResource[]>(this.endpoint.url).pipe(map(items => items.map(ReservationAssembler.toEntity)));
+    return this.http.get<ReservationResource[]>(this.endpoint.url).pipe(map(items => items.map(ReservationAssemble.toEntity)));
   }
   create(request: CreateReservationRequest): Observable<Reservation> {
     return this.http.post<ReservationResource>(this.endpoint.url, ReservationAssembler.toResource(request)).pipe(map(ReservationAssembler.toEntity));

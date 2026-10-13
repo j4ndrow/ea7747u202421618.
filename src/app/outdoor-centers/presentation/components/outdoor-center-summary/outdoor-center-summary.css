@@ -1,0 +1,4 @@
+mat-card { margin: 8px; }
+mat-card-title { font-size: 18px; overflow-wrap: anywhere; }
+mat-card-footer { padding: 0 16px 12px; }
+mat-card-footer p { margin: 6px 0; }
