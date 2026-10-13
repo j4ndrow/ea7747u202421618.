@@ -1,0 +1,9 @@
+mat-toolbar { height: auto; min-height: 64px; padding: 8px 16px; gap: 10px; flex-wrap: wrap; }
+.title { white-space: normal; font-size: 18px; }
+.spacer { flex: 1; }
+@media (max-width: 600px) {
+  mat-toolbar { display: grid; grid-template-columns: 40px 1fr; }
+  .title { font-size: 15px; }
+  .spacer { display: none; }
+  app-language-switcher { grid-column: 2; justify-self: end; }
+}

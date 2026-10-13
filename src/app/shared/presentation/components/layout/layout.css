@@ -1,0 +1,11 @@
+mat-sidenav-container { min-height: calc(100vh - 64px); }
+mat-sidenav { width: 190px; }
+main { padding: 16px; }
+.active { background: var(--mat-sys-secondary-container); }
+@media (max-width: 700px) {
+  mat-sidenav { width: 125px; }
+  main { padding: 8px; }
+  a[mat-list-item] { padding-left: 8px; padding-right: 8px; }
+}
+
+.nav-label { display: block; white-space: normal; line-height: 1.3; }

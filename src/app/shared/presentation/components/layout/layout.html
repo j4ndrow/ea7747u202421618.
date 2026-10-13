@@ -1,0 +1,14 @@
+<app-toolbar />
+<mat-sidenav-container autosize>
+  <mat-sidenav mode="side" opened>
+    <nav [attr.aria-label]="'navigation' | translate">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/home" routerLinkActive="active" #home="routerLinkActive"
+           [attr.aria-current]="home.isActive ? 'page' : null"><span class="nav-label">{{ 'home' | translate }}</span></a>
+        <a mat-list-item routerLink="/reservations/new" routerLinkActive="active" #reservation="routerLinkActive"
+           [attr.aria-current]="reservation.isActive ? 'page' : null"><span class="nav-label">{{ 'new-reservation' | translate }}</span></a>
+      </mat-nav-list>
+    </nav>
+  </mat-sidenav>
+  <mat-sidenav-content><main><router-outlet /></main></mat-sidenav-content>
+</mat-sidenav-container>
